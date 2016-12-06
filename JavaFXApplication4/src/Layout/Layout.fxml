@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MainController">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane blendMode="MULTIPLY" prefHeight="635.0" prefWidth="1095.0" style="-fx-background-color: #474747;">
+         <children>
+            <MenuBar blendMode="HARD_LIGHT" layoutY="-1.0" prefHeight="28.0" prefWidth="1095.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#onCloseClick" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#onAboutClick" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <Canvas fx:id="canvas" blendMode="HARD_LIGHT" height="606.0" layoutY="27.0" width="1047.0" />
+            <Separator blendMode="OVERLAY" layoutX="1048.0" layoutY="27.0" orientation="VERTICAL" prefHeight="606.0" prefWidth="0.0" />
+            <Slider fx:id="slider" blendMode="COLOR_DODGE" layoutX="1067.0" layoutY="42.0" max="220" min="70" orientation="VERTICAL" pickOnBounds="false">
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect></Slider>
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>
